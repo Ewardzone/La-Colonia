@@ -51,7 +51,7 @@ header .linksContainer button {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
   text-shadow: 1px 1px 2px black;
-  color: var(--wine);
+  color: gainsboro;
   font-size: 2vw;
   background-color: var(--dark1);
   width: -webkit-max-content;
@@ -96,17 +96,17 @@ body .main .mainText {
   text-align: center;
   font-family: "Roboto Condensed", sans-serif;
   color: white;
-  font-size: 3vw;
+  font-size: 3.4vw;
   font-weight: 500;
   width: 80vw;
   position: relative;
-  top: 43px;
+  top: 0;
   margin: auto;
   padding: 0 1vw;
 }
 body .main .mainText h2 {
   font-family: "Handlee", cursive;
-  font-size: 9vw;
+  font-size: 7vw;
 }
 body .main .mainText h3 {
   margin-top: 5vh;
@@ -681,7 +681,7 @@ body footer .footerCreator .creatorContact a:hover {
   }
   body .main .dailyMenuContainer .dailyMenu {
     width: 35vw;
-    height: 67vh;
+    height: 60vw;
   }
   body .main .dailyMenuContainer .dailyMenu img {
     width: 35vw;
@@ -702,6 +702,7 @@ body footer .footerCreator .creatorContact a:hover {
   }
   body .main .dailyMenuContainer .dailyMenu .priceContainer .order {
     width: 13vw;
+    padding: 0 1vw;
   }
   body .main .dailyMenuContainer .dailyMenu .priceContainer .order i {
     font-size: 6.5vw;
@@ -711,7 +712,7 @@ body footer .footerCreator .creatorContact a:hover {
   }
   body .promos .bfCardsContainer .promoCard {
     width: 35vw;
-    height: 67vh;
+    height: 65vw;
   }
   body .promos .bfCardsContainer .promoCard img {
     width: 35vw;
@@ -732,6 +733,7 @@ body footer .footerCreator .creatorContact a:hover {
   }
   body .promos .bfCardsContainer .promoCard .priceContainer .order {
     width: 13vw;
+    padding: 0 1vw;
   }
   body .promos .bfCardsContainer .promoCard .priceContainer .order i {
     font-size: 6.5vw;
@@ -740,11 +742,11 @@ body footer .footerCreator .creatorContact a:hover {
     font-size: 2vw;
   }
   body .fast {
-    padding-bottom: 35vw;
+    padding-bottom: vw;
   }
   body .fast .bfCardsContainer .dailyMenu {
     width: 35vw;
-    height: 67vh;
+    height: 65vw;
   }
   body .fast .bfCardsContainer .dailyMenu img {
     width: 35vw;
@@ -769,6 +771,7 @@ body footer .footerCreator .creatorContact a:hover {
   }
   body .fast .bfCardsContainer .dailyMenu .priceContainer .order {
     width: 13vw;
+    padding: 0 1vw;
   }
   body .fast .bfCardsContainer .dailyMenu .priceContainer .order i {
     font-size: 6.5vw;
@@ -845,6 +848,7 @@ body footer .footerCreator .creatorContact a:hover {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    padding-bottom: 15vw;
   }
   body .promos .bfCardsContainer .promoCard {
     width: 20vw;

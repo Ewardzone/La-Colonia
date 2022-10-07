@@ -59,7 +59,7 @@ header {
       font-family: $font;
       font-weight: 700;
       text-shadow: 1px 1px 2px black;
-      color: var(--wine);
+      color: gainsboro;
       font-size: 2vw;
       background-color: var(--dark1);
       width: max-content;
@@ -103,16 +103,16 @@ body {
       text-align: center;
       font-family: $font;
       color: white;
-      font-size: 3vw;
+      font-size: 3.4vw;
       font-weight: 500;
       width: 80vw;
       position: relative;
-      top: 43px;
+      top: 0;
       margin: auto;
       padding: 0 1vw;
       h2 {
         font-family: $font2;
-        font-size: 9vw;
+        font-size: 7vw;
       }
       h3 {
         margin-top: 5vh;
@@ -687,7 +687,7 @@ body {
         top: 44px;
         .dailyMenu {
           width: 35vw;
-          height: 67vh;
+          height: 60vw;
           img {
             width: 35vw;
           }
@@ -706,6 +706,7 @@ body {
             }
             .order {
               width: 13vw;
+              padding: 0 1vw;
               i {
                 font-size: 6.5vw;
               }
@@ -722,7 +723,7 @@ body {
       .bfCardsContainer {
         .promoCard {
           width: 35vw;
-          height: 67vh;
+          height: 65vw;
           img {
             width: 35vw;
           }
@@ -741,6 +742,7 @@ body {
             }
             .order {
               width: 13vw;
+              padding: 0 1vw;
               i {
                 font-size: 6.5vw;
               }
@@ -756,11 +758,11 @@ body {
     // section al instante---------------------------------------------------
 
     .fast {
-      padding-bottom: 35vw;
+      padding-bottom: vw;
       .bfCardsContainer {
         .dailyMenu {
           width: 35vw;
-          height: 67vh;
+          height: 65vw;
           img {
             width: 35vw;
             height: 150.13px;
@@ -783,6 +785,7 @@ body {
             }
             .order {
               width: 13vw;
+              padding: 0 1vw;
               i {
                 font-size: 6.5vw;
               }
@@ -873,6 +876,7 @@ body {
 
     .promos {
       height: fit-content;
+      padding-bottom: 15vw;
       .bfCardsContainer {
         .promoCard {
           width: 20vw;

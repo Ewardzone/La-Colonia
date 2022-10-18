@@ -683,6 +683,9 @@ body {
 
     // section main---------------------------------------------
     .main {
+      .mainText {
+        font-size: 5.8vw;
+      }
       .dailyMenuContainer {
         display: flex;
         flex-direction: row;
@@ -821,6 +824,7 @@ body {
       gap: 0;
       .mainText {
         font-size: 1.5vw;
+        margin-top: 2vw;
         h2 {
           font-size: 3vw;
         }

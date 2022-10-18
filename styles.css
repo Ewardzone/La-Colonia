@@ -675,6 +675,9 @@ body footer .footerCreator .creatorContact a:hover {
   transition: 0.7s;
 }
 @media screen and (min-width: 768px) {
+  body .main .mainText {
+    font-size: 5.8vw;
+  }
   body .main .dailyMenuContainer {
     display: flex;
     flex-direction: row;
@@ -794,6 +797,7 @@ body footer .footerCreator .creatorContact a:hover {
   }
   body .main .mainText {
     font-size: 1.5vw;
+    margin-top: 2vw;
   }
   body .main .mainText h2 {
     font-size: 3vw;

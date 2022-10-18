@@ -96,7 +96,7 @@ body .main .mainText {
   text-align: center;
   font-family: "Roboto Condensed", sans-serif;
   color: white;
-  font-size: 3.4vw;
+  font-size: 4.8vw;
   font-weight: 500;
   width: 80vw;
   position: relative;
@@ -168,6 +168,9 @@ body .main .notices .locationNotice .fa-location-dot {
 }
 body .main .notices .locationNotice:active {
   transform: scale(0.95);
+}
+body .main .notices .fa-bounce {
+  color: var(--dark2);
 }
 body .main .dailyMenuContainer {
   gap: 2vh;

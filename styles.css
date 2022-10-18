@@ -791,8 +791,9 @@ body footer .footerCreator .creatorContact a:hover {
 }
 @media screen and (min-width: 1024px) {
   body .main {
+    position: relative;
     flex-direction: row;
-    padding-top: 7.5vw;
+    top: 1vw;
     gap: 0;
   }
   body .main .mainText {

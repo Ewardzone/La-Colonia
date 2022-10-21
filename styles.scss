@@ -49,7 +49,6 @@ header {
     }
   }
   .linksContainer {
-
     display: none;
     flex-wrap: wrap;
     margin: 0 1vw;
@@ -225,7 +224,6 @@ body {
       .locationNotice:active {
         transform: scale(0.95);
       }
-      
     }
     .dailyMenuContainer {
       gap: 2vh;
@@ -249,7 +247,6 @@ body {
           border-top-left-radius: 24px;
           border-top-right-radius: 24px;
           width: 70vw;
-
         }
         h3 {
           text-align: center;
@@ -325,7 +322,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding-bottom: 65vw;
+    padding-bottom: 70vw;
     h2 {
       position: relative;
       top: 17vh;
@@ -342,7 +339,7 @@ body {
       gap: 8vw;
       position: relative;
       top: 22vh;
-      .dailyMenu {
+      .fastMenu {
         position: relative;
         display: flex;
         flex-direction: column;
@@ -350,8 +347,8 @@ body {
         justify-content: center;
         align-items: flex-start;
         height: fit-content;
-        width: 35vw;
-        height: 56vw;
+        width: 17vw;
+        height: 30vw;
         border-radius: 25px;
         box-shadow: $shadowBox;
         font-family: $font;
@@ -359,21 +356,21 @@ body {
           position: relative;
           border-top-left-radius: 24px;
           border-top-right-radius: 24px;
-          width: 35vw;
+          width: 17vw;
         }
         #desayuno {
           height: 20vw;
         }
         h3 {
           text-align: center;
-          font-size: 3vw;
+          font-size: 1.7vw;
           position: relative;
           margin: auto;
         }
         p {
           height: 8%;
           text-align: center;
-          font-size: 2.5vw;
+          font-size: 1.5vw;
           margin: 1vh auto;
         }
         .priceContainer {
@@ -382,7 +379,7 @@ body {
           justify-content: center;
           align-items: center;
           gap: 1vw;
-          margin: 2vh auto 1vh auto;
+          margin: 1vh auto 2vh auto;
           a {
             text-decoration: none;
             :active {
@@ -399,11 +396,11 @@ body {
           padding: 0 1vw;
           border-radius: 15px;
           box-shadow: 1px 1px 10px black;
-          width: 12vw;
+          width: 5vw;
           p {
             margin: 0;
             font-family: $font;
-            font-size: 2.5vw;
+            font-size: 1vw;
             font-weight: 600;
             color: green;
             text-shadow: 1px 1px 20px black;
@@ -411,13 +408,13 @@ body {
         }
         .fa-square-whatsapp {
           color: green;
-          font-size: 4vw;
+          font-size: 2vw;
           text-shadow: 1px 1px 40px black;
         }
         .price {
           margin: 1vh auto;
           font-family: $font;
-          font-size: 5vw;
+          font-size: 2vw;
           font-weight: 800;
           border-radius: 15px;
           color: var(--wine);
@@ -730,10 +727,11 @@ body {
     // header------------------------------------------------------------
 
     // section main---------------------------------------------
-    .hideVerticalMenu, .hideVerticalMenu {
+    .hideVerticalMenu,
+    .hideVerticalMenu {
       top: 27vw;
     }
-    
+
     .main {
       .mainText {
         font-size: 3.4vw;
@@ -873,7 +871,8 @@ body {
     .linksContainer {
       display: flex;
     }
-    .hideVerticalMenu, .showVerticalMenu {
+    .hideVerticalMenu,
+    .showVerticalMenu {
       display: none;
     }
     .fa-square-caret-down {
@@ -985,10 +984,8 @@ body {
             }
           }
         }
-        }
       }
     }
-
     .fast {
       height: fit-content;
       padding-bottom: 25vw;
@@ -1079,6 +1076,5 @@ body {
         }
       }
     }
-
   }
-
+}

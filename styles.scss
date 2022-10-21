@@ -49,7 +49,8 @@ header {
     }
   }
   .linksContainer {
-    display: flex;
+
+    display: none;
     flex-wrap: wrap;
     margin: 0 1vw;
     width: 50vw;
@@ -72,6 +73,50 @@ header {
     }
     .linkItem:active {
       transform: scale(0.95);
+    }
+  }
+  .fa-square-caret-down {
+    font-size: 2em;
+    position: absolute;
+    right: 17.5vw;
+    bottom: 5.5vw;
+    cursor: pointer;
+  }
+
+  .hideVerticalMenu {
+    display: none;
+  }
+  .showVerticalMenu {
+    position: relative;
+    top: 29.5vw;
+    right: 6vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: max-content;
+    height: max-content;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    button {
+      font-family: $font;
+      font-weight: 700;
+      text-shadow: 1px 1px 2px black;
+      color: gainsboro;
+      font-size: 5vw;
+      background-color: var(--dark1);
+      width: 30vw;
+      padding: 2vw 1vw;
+      border: none;
+      border-bottom: solid 2px black;
+      cursor: pointer;
+    }
+    .linkItem:active {
+      transform: scale(0.95);
+      color: var(--dark2);
+      background-color: black;
+      transition: 0.1s;
     }
   }
   //body --------------------------------------------------------------------------------------------
@@ -103,7 +148,7 @@ body {
       text-align: center;
       font-family: $font;
       color: white;
-      font-size: 4.8vw;
+      font-size: 5.5vw;
       font-weight: 500;
       width: 80vw;
       position: relative;
@@ -119,6 +164,11 @@ body {
       }
       p {
         margin: 3vh 0;
+      }
+      .fa-angles-down {
+        color: var(--main);
+        position: relative;
+        left: 40vw;
       }
     }
     .notices {
@@ -175,9 +225,7 @@ body {
       .locationNotice:active {
         transform: scale(0.95);
       }
-      .fa-bounce {
-        color: var(--dark2);
-      }
+      
     }
     .dailyMenuContainer {
       gap: 2vh;
@@ -682,9 +730,13 @@ body {
     // header------------------------------------------------------------
 
     // section main---------------------------------------------
+    .hideVerticalMenu, .hideVerticalMenu {
+      top: 27vw;
+    }
+    
     .main {
       .mainText {
-        font-size: 2vw;
+        font-size: 3.4vw;
       }
       .dailyMenuContainer {
         display: flex;
@@ -818,6 +870,15 @@ body {
   }
 
   @media screen and (min-width: 1024px) {
+    .linksContainer {
+      display: flex;
+    }
+    .hideVerticalMenu, .showVerticalMenu {
+      display: none;
+    }
+    .fa-square-caret-down {
+      display: none;
+    }
     .main {
       position: relative;
       flex-direction: row;
@@ -828,6 +889,9 @@ body {
         margin-top: 2vw;
         h2 {
           font-size: 3vw;
+        }
+        .fa-angles-down {
+          display: none;
         }
       }
       .notices {
@@ -851,32 +915,33 @@ body {
       }
       .dailyMenuContainer {
         margin-right: 2vw;
+        position: relative;
         .dailyMenu {
-          width: 25vw;
-          height: 35vw;
+          width: 15vw;
+          height: 20vw;
           img {
-            width: 25vw;
-            height: 15vw;
+            width: 15vw;
+            height: 7.5vw;
           }
           h3 {
-            font-size: 2.5vw;
+            font-size: 1.5vw;
           }
           p {
-            font-size: 1.7vw;
+            font-size: 1vw;
           }
           .priceContainer {
-            width: 25vw;
+            width: 15vw;
             .price {
-              font-size: 2.5vw;
+              font-size: 1.5vw;
             }
             .order {
-              width: 7vw;
+              width: 3vw;
               padding: 0 1vw;
               p {
-                font-size: 1.5vw;
+                font-size: 0.8vw;
               }
-              i {
-                font-size: 3.5vw;
+              .fa-square-whatsapp {
+                font-size: 2vw;
               }
             }
           }
@@ -888,36 +953,38 @@ body {
       height: fit-content;
       padding-bottom: 15vw;
       .bfCardsContainer {
+        display: flex;
+        justify-content: space-between;
         .promoCard {
-          width: 20vw;
-          height: 30vw;
+          width: 15vw;
+          height: 20vw;
           img {
-            width: 20vw;
+            width: 15vw;
+            height: 7.5vw;
           }
           h3 {
-            font-size: 2vw;
+            font-size: 1.5vw;
           }
           p {
             font-size: 1vw;
           }
           .priceContainer {
-            width: 20vw;
-            gap: 1vw;
-            margin-top: 2vw;
+            width: 15vw;
             .price {
-              font-size: 3vw;
+              font-size: 1.5vw;
             }
             .order {
-              width: 7vw;
+              width: 3vw;
               padding: 0 1vw;
               p {
-                font-size: 1vw;
+                font-size: 0.8vw;
               }
               i {
-                font-size: 4vw;
+                font-size: 2vw;
               }
             }
           }
+        }
         }
       }
     }
@@ -927,29 +994,29 @@ body {
       padding-bottom: 25vw;
       .bfCardsContainer {
         .dailyMenu {
-          width: 18vw;
-          height: 30vw;
+          width: 15vw;
+          height: 18vw;
           img {
-            width: 18vw;
+            width: 15vw;
           }
           h3 {
-            font-size: 1.5vw;
+            font-size: 1vw;
           }
           p {
-            font-size: 1.3vw;
+            font-size: 0.8vw;
           }
           .priceContainer {
-            width: 15vw;
+            width: 13vw;
             .price {
-              font-size: 2.5vw;
+              font-size: 1.7vw;
             }
             .order {
-              width: 5vw;
+              width: 4vw;
               p {
-                font-size: 1vw;
+                font-size: 0.7vw;
               }
               i {
-                font-size: 2.5vw;
+                font-size: 2vw;
               }
             }
           }
@@ -960,34 +1027,32 @@ body {
     .lunchs {
       .bfCardsContainer {
         .promoCard {
-          width: 20vw;
-          height: 30vw;
+          width: 15vw;
+          height: 20vw;
           img {
-            width: 20vw;
-            height: 10vw;
+            width: 15vw;
+            height: 7.5vw;
           }
           h3 {
-            font-size: 2vw;
+            font-size: 1.3vw;
           }
           p {
             font-size: 1vw;
           }
           .priceContainer {
-            width: 20vw;
-            gap: 1vw;
-            margin-top: 2vw;
+            width: 10vw;
+            gap: 2vw;
             .price {
-              font-size: 3vw;
-              margin: 0;
+              font-size: 1.5vw;
             }
             .order {
-              width: 7vw;
+              width: 3vw;
               padding: 0 1vw;
               p {
-                font-size: 1vw;
+                font-size: 0.8vw;
               }
               i {
-                font-size: 4vw;
+                font-size: 2vw;
               }
             }
           }
@@ -1016,4 +1081,4 @@ body {
     }
 
   }
-}
+

@@ -40,7 +40,7 @@ header .logoContainer img {
   height: 13vh;
 }
 header .linksContainer {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   margin: 0 1vw;
   width: 50vw;
@@ -66,6 +66,53 @@ header .linksContainer button {
 }
 header .linksContainer .linkItem:active {
   transform: scale(0.95);
+}
+header .fa-square-caret-down {
+  font-size: 2em;
+  position: absolute;
+  right: 17.5vw;
+  bottom: 5.5vw;
+  cursor: pointer;
+}
+header .hideVerticalMenu {
+  display: none;
+}
+header .showVerticalMenu {
+  position: relative;
+  top: 29.5vw;
+  right: 6vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+}
+header .showVerticalMenu button {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px black;
+  color: gainsboro;
+  font-size: 5vw;
+  background-color: var(--dark1);
+  width: 30vw;
+  padding: 2vw 1vw;
+  border: none;
+  border-bottom: solid 2px black;
+  cursor: pointer;
+}
+header .showVerticalMenu .linkItem:active {
+  transform: scale(0.95);
+  color: var(--dark2);
+  background-color: black;
+  transition: 0.1s;
 }
 
 body {
@@ -96,7 +143,7 @@ body .main .mainText {
   text-align: center;
   font-family: "Roboto Condensed", sans-serif;
   color: white;
-  font-size: 4.8vw;
+  font-size: 5.5vw;
   font-weight: 500;
   width: 80vw;
   position: relative;
@@ -113,6 +160,11 @@ body .main .mainText h3 {
 }
 body .main .mainText p {
   margin: 3vh 0;
+}
+body .main .mainText .fa-angles-down {
+  color: var(--main);
+  position: relative;
+  left: 40vw;
 }
 body .main .notices {
   display: flex;
@@ -168,9 +220,6 @@ body .main .notices .locationNotice .fa-location-dot {
 }
 body .main .notices .locationNotice:active {
   transform: scale(0.95);
-}
-body .main .notices .fa-bounce {
-  color: var(--dark2);
 }
 body .main .dailyMenuContainer {
   gap: 2vh;
@@ -675,8 +724,11 @@ body footer .footerCreator .creatorContact a:hover {
   transition: 0.7s;
 }
 @media screen and (min-width: 768px) {
+  body .hideVerticalMenu, body .hideVerticalMenu {
+    top: 27vw;
+  }
   body .main .mainText {
-    font-size: 2vw;
+    font-size: 3.4vw;
   }
   body .main .dailyMenuContainer {
     display: flex;
@@ -790,6 +842,15 @@ body footer .footerCreator .creatorContact a:hover {
   }
 }
 @media screen and (min-width: 1024px) {
+  body .linksContainer {
+    display: flex;
+  }
+  body .hideVerticalMenu, body .showVerticalMenu {
+    display: none;
+  }
+  body .fa-square-caret-down {
+    display: none;
+  }
   body .main {
     position: relative;
     flex-direction: row;
@@ -802,6 +863,9 @@ body footer .footerCreator .creatorContact a:hover {
   }
   body .main .mainText h2 {
     font-size: 3vw;
+  }
+  body .main .mainText .fa-angles-down {
+    display: none;
   }
   body .main .notices .offerNotice {
     width: 7vw;
@@ -822,36 +886,37 @@ body footer .footerCreator .creatorContact a:hover {
   }
   body .main .dailyMenuContainer {
     margin-right: 2vw;
+    position: relative;
   }
   body .main .dailyMenuContainer .dailyMenu {
-    width: 25vw;
-    height: 35vw;
+    width: 15vw;
+    height: 20vw;
   }
   body .main .dailyMenuContainer .dailyMenu img {
-    width: 25vw;
-    height: 15vw;
+    width: 15vw;
+    height: 7.5vw;
   }
   body .main .dailyMenuContainer .dailyMenu h3 {
-    font-size: 2.5vw;
+    font-size: 1.5vw;
   }
   body .main .dailyMenuContainer .dailyMenu p {
-    font-size: 1.7vw;
+    font-size: 1vw;
   }
   body .main .dailyMenuContainer .dailyMenu .priceContainer {
-    width: 25vw;
+    width: 15vw;
   }
   body .main .dailyMenuContainer .dailyMenu .priceContainer .price {
-    font-size: 2.5vw;
+    font-size: 1.5vw;
   }
   body .main .dailyMenuContainer .dailyMenu .priceContainer .order {
-    width: 7vw;
+    width: 3vw;
     padding: 0 1vw;
   }
   body .main .dailyMenuContainer .dailyMenu .priceContainer .order p {
-    font-size: 1.5vw;
+    font-size: 0.8vw;
   }
-  body .main .dailyMenuContainer .dailyMenu .priceContainer .order i {
-    font-size: 3.5vw;
+  body .main .dailyMenuContainer .dailyMenu .priceContainer .order .fa-square-whatsapp {
+    font-size: 2vw;
   }
   body .promos {
     height: -webkit-fit-content;
@@ -859,111 +924,112 @@ body footer .footerCreator .creatorContact a:hover {
     height: fit-content;
     padding-bottom: 15vw;
   }
+  body .promos .bfCardsContainer {
+    display: flex;
+    justify-content: space-between;
+  }
   body .promos .bfCardsContainer .promoCard {
-    width: 20vw;
-    height: 30vw;
+    width: 15vw;
+    height: 20vw;
   }
   body .promos .bfCardsContainer .promoCard img {
-    width: 20vw;
+    width: 15vw;
+    height: 7.5vw;
   }
   body .promos .bfCardsContainer .promoCard h3 {
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
   body .promos .bfCardsContainer .promoCard p {
     font-size: 1vw;
   }
   body .promos .bfCardsContainer .promoCard .priceContainer {
-    width: 20vw;
-    gap: 1vw;
-    margin-top: 2vw;
+    width: 15vw;
   }
   body .promos .bfCardsContainer .promoCard .priceContainer .price {
-    font-size: 3vw;
+    font-size: 1.5vw;
   }
   body .promos .bfCardsContainer .promoCard .priceContainer .order {
-    width: 7vw;
+    width: 3vw;
     padding: 0 1vw;
   }
   body .promos .bfCardsContainer .promoCard .priceContainer .order p {
-    font-size: 1vw;
+    font-size: 0.8vw;
   }
   body .promos .bfCardsContainer .promoCard .priceContainer .order i {
-    font-size: 4vw;
-  }
-  body .fast {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    padding-bottom: 25vw;
-  }
-  body .fast .bfCardsContainer .dailyMenu {
-    width: 18vw;
-    height: 30vw;
-  }
-  body .fast .bfCardsContainer .dailyMenu img {
-    width: 18vw;
-  }
-  body .fast .bfCardsContainer .dailyMenu h3 {
-    font-size: 1.5vw;
-  }
-  body .fast .bfCardsContainer .dailyMenu p {
-    font-size: 1.3vw;
-  }
-  body .fast .bfCardsContainer .dailyMenu .priceContainer {
-    width: 15vw;
-  }
-  body .fast .bfCardsContainer .dailyMenu .priceContainer .price {
-    font-size: 2.5vw;
-  }
-  body .fast .bfCardsContainer .dailyMenu .priceContainer .order {
-    width: 5vw;
-  }
-  body .fast .bfCardsContainer .dailyMenu .priceContainer .order p {
-    font-size: 1vw;
-  }
-  body .fast .bfCardsContainer .dailyMenu .priceContainer .order i {
-    font-size: 2.5vw;
-  }
-  body .lunchs .bfCardsContainer .promoCard {
-    width: 20vw;
-    height: 30vw;
-  }
-  body .lunchs .bfCardsContainer .promoCard img {
-    width: 20vw;
-    height: 10vw;
-  }
-  body .lunchs .bfCardsContainer .promoCard h3 {
     font-size: 2vw;
   }
-  body .lunchs .bfCardsContainer .promoCard p {
-    font-size: 1vw;
-  }
-  body .lunchs .bfCardsContainer .promoCard .priceContainer {
-    width: 20vw;
-    gap: 1vw;
-    margin-top: 2vw;
-  }
-  body .lunchs .bfCardsContainer .promoCard .priceContainer .price {
-    font-size: 3vw;
-    margin: 0;
-  }
-  body .lunchs .bfCardsContainer .promoCard .priceContainer .order {
-    width: 7vw;
-    padding: 0 1vw;
-  }
-  body .lunchs .bfCardsContainer .promoCard .priceContainer .order p {
-    font-size: 1vw;
-  }
-  body .lunchs .bfCardsContainer .promoCard .priceContainer .order i {
-    font-size: 4vw;
-  }
-  body footer .footerMain .footerText p {
-    font-size: 2vw;
-  }
-  body footer .footerCreator p {
-    font-size: 1vw;
-  }
-  body footer .footerCreator .creatorContact i {
-    font-size: 1.5vw;
-  }
+}
+body .fast {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 25vw;
+}
+body .fast .bfCardsContainer .dailyMenu {
+  width: 15vw;
+  height: 18vw;
+}
+body .fast .bfCardsContainer .dailyMenu img {
+  width: 15vw;
+}
+body .fast .bfCardsContainer .dailyMenu h3 {
+  font-size: 1vw;
+}
+body .fast .bfCardsContainer .dailyMenu p {
+  font-size: 0.8vw;
+}
+body .fast .bfCardsContainer .dailyMenu .priceContainer {
+  width: 13vw;
+}
+body .fast .bfCardsContainer .dailyMenu .priceContainer .price {
+  font-size: 1.7vw;
+}
+body .fast .bfCardsContainer .dailyMenu .priceContainer .order {
+  width: 4vw;
+}
+body .fast .bfCardsContainer .dailyMenu .priceContainer .order p {
+  font-size: 0.7vw;
+}
+body .fast .bfCardsContainer .dailyMenu .priceContainer .order i {
+  font-size: 2vw;
+}
+body .lunchs .bfCardsContainer .promoCard {
+  width: 15vw;
+  height: 20vw;
+}
+body .lunchs .bfCardsContainer .promoCard img {
+  width: 15vw;
+  height: 7.5vw;
+}
+body .lunchs .bfCardsContainer .promoCard h3 {
+  font-size: 1.3vw;
+}
+body .lunchs .bfCardsContainer .promoCard p {
+  font-size: 1vw;
+}
+body .lunchs .bfCardsContainer .promoCard .priceContainer {
+  width: 10vw;
+  gap: 2vw;
+}
+body .lunchs .bfCardsContainer .promoCard .priceContainer .price {
+  font-size: 1.5vw;
+}
+body .lunchs .bfCardsContainer .promoCard .priceContainer .order {
+  width: 3vw;
+  padding: 0 1vw;
+}
+body .lunchs .bfCardsContainer .promoCard .priceContainer .order p {
+  font-size: 0.8vw;
+}
+body .lunchs .bfCardsContainer .promoCard .priceContainer .order i {
+  font-size: 2vw;
+}
+body footer .footerMain .footerText p {
+  font-size: 2vw;
+}
+body footer .footerCreator p {
+  font-size: 1vw;
+}
+body footer .footerCreator .creatorContact i {
+  font-size: 1.5vw;
 }/*# sourceMappingURL=styles.css.map */

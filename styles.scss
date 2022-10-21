@@ -347,8 +347,8 @@ body {
         justify-content: center;
         align-items: flex-start;
         height: fit-content;
-        width: 17vw;
-        height: 30vw;
+        width: 34vw;
+        height: 60vw;
         border-radius: 25px;
         box-shadow: $shadowBox;
         font-family: $font;
@@ -356,21 +356,22 @@ body {
           position: relative;
           border-top-left-radius: 24px;
           border-top-right-radius: 24px;
-          width: 17vw;
+          width: 34vw;
+          height: 20vw;
         }
         #desayuno {
           height: 20vw;
         }
         h3 {
           text-align: center;
-          font-size: 1.7vw;
+          font-size: 3vw;
           position: relative;
           margin: auto;
         }
         p {
           height: 8%;
           text-align: center;
-          font-size: 1.5vw;
+          font-size: 2.5vw;
           margin: 1vh auto;
         }
         .priceContainer {
@@ -396,11 +397,11 @@ body {
           padding: 0 1vw;
           border-radius: 15px;
           box-shadow: 1px 1px 10px black;
-          width: 5vw;
+          width: 10vw;
           p {
             margin: 0;
             font-family: $font;
-            font-size: 1vw;
+            font-size: 2vw;
             font-weight: 600;
             color: green;
             text-shadow: 1px 1px 20px black;
@@ -408,13 +409,13 @@ body {
         }
         .fa-square-whatsapp {
           color: green;
-          font-size: 2vw;
+          font-size: 4vw;
           text-shadow: 1px 1px 40px black;
         }
         .price {
           margin: 1vh auto;
           font-family: $font;
-          font-size: 2vw;
+          font-size: 5vw;
           font-weight: 800;
           border-radius: 15px;
           color: var(--wine);
@@ -990,7 +991,7 @@ body {
       height: fit-content;
       padding-bottom: 25vw;
       .bfCardsContainer {
-        .dailyMenu {
+        .fastMenu {
           width: 15vw;
           height: 18vw;
           img {

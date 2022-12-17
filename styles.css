@@ -25,7 +25,7 @@ header {
   left: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: 15vh;
   width: 100%;
@@ -38,6 +38,24 @@ header .logoContainer {
 }
 header .logoContainer img {
   height: 13vh;
+}
+header .innLink {
+  text-decoration: none;
+}
+header .newsBoard {
+  position: relative;
+  right: 5%;
+  bottom: 5%;
+  color: var(--light2);
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: green;
+  border-radius: 15px;
+  padding: 1%;
+  font-family: "Roboto Condensed", sans-serif;
+  box-shadow: 1px 1px 5px rgb(32, 32, 32);
+  text-shadow: 1px 1px 5px rgb(32, 32, 32);
+  text-align: center;
 }
 header .linksContainer {
   display: none;
@@ -70,8 +88,8 @@ header .linksContainer .linkItem:active {
 header .fa-square-caret-down {
   font-size: 2em;
   position: absolute;
-  right: 17.5vw;
-  bottom: 5.5vw;
+  right: 5.5vw;
+  bottom: 0.5vw;
   cursor: pointer;
 }
 header .hideVerticalMenu {
@@ -844,6 +862,10 @@ body .hideVerticalMenu {
   }
 }
 @media screen and (min-width: 1024px) {
+  body .newsBoard {
+    right: 0;
+    bottom: 0;
+  }
   body .linksContainer {
     display: flex;
   }

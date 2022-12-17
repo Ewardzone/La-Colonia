@@ -35,7 +35,7 @@ header {
   left: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: 15vh;
   width: 100%;
@@ -47,6 +47,24 @@ header {
     img {
       height: 13vh;
     }
+  }
+  .innLink {
+    text-decoration: none;
+  }
+  .newsBoard {
+    position: relative;
+    right: 5%;
+    bottom: 5%;
+    color: var(--light2);
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: green;
+    border-radius: 15px;
+    padding: 1%;
+    font-family: $font;
+    box-shadow: 1px 1px 5px rgb(32, 32, 32);
+    text-shadow: 1px 1px 5px rgb(32, 32, 32);
+    text-align: center;
   }
   .linksContainer {
     display: none;
@@ -77,8 +95,8 @@ header {
   .fa-square-caret-down {
     font-size: 2em;
     position: absolute;
-    right: 17.5vw;
-    bottom: 5.5vw;
+    right: 5.5vw;
+    bottom: 0.5vw;
     cursor: pointer;
   }
 
@@ -193,6 +211,7 @@ body {
           text-align: center;
         }
       }
+
       .locationNotice {
         background-color: rgb(208, 211, 208);
         border-radius: 100%;
@@ -869,6 +888,10 @@ body {
   }
 
   @media screen and (min-width: 1024px) {
+    .newsBoard {
+      right: 0;
+      bottom: 0;
+    }
     .linksContainer {
       display: flex;
     }
